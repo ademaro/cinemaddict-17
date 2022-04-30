@@ -10,9 +10,11 @@ import { render } from '../render.js';
 const FILMS_COUNT = 5;
 
 export default class FilmsPresenter {
-  init = (mainElement) => {
+  constructor(mainElement) {
     this.mainElement = mainElement;
+  }
 
+  init() {
     render(new NavigationView(), this.mainElement);
     render(new SortView(), this.mainElement);
     render(new FilmsView(), this.mainElement);
@@ -27,5 +29,5 @@ export default class FilmsPresenter {
     render(new ShowMoreView(), filmListView.getElement());
 
     render(new PopupView(), this.mainElement);
-  };
+  }
 }

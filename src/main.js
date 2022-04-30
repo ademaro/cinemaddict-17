@@ -6,5 +6,5 @@ const headerElement = document.querySelector('.header');
 render(new ProfileView(), headerElement);
 
 const mainElement = document.querySelector('.main');
-const filmsPresenter = new FilmsPresenter();
-filmsPresenter.init(mainElement);
+const filmsPresenter = new FilmsPresenter(mainElement);
+filmsPresenter.init();
